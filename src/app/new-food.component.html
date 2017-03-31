@@ -1,0 +1,18 @@
+<h1>New Food Entry</h1>
+<div>
+  <label>Enter Food:</label>
+  <input #newName>
+</div>
+  <div>
+    <label>Enter Details:</label>
+    <input #newDetails>
+  </div>
+  <div>
+    <label>Enter Calories:</label>
+    <input #newCalories>
+    <button
+    (click)="addClicked(newName.value,newDetails.value,newCalories.value);
+     			newName.value='';
+     			newDetails.value='';
+     			newCalories.value='';">Add</button>
+  </div>

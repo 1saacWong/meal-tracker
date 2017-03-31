@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="container">
+  <h1>Meal Tracker</h1>
+  <app-food-list
+      [childFoodList]="masterFoodList"
+      (clickSender)="showDetails($event)">
+  </app-food-list>
+  <app-edit-food
+      [childSelectedFood]="selectedFood"
+      (doneClickedSender)="finishedEditing()">
+  </app-edit-food>
+  <app-new-food
+      (newFoodSender)="addFood($event)">
+  </app-new-food>
+
+</div>
